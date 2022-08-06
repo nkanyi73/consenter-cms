@@ -7,6 +7,9 @@ import "./Owner.sol";
 contract Transaction {
     //Addresses of all owners' contracts and the permissions given to each company
     //for contract x belonging to owner y company z has access to 123
-    address public owner;
-    
+    //Company
+    //list of processors
+    address [] processors;
+    //
+
 }

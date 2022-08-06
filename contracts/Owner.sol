@@ -2,7 +2,10 @@
 
 pragma solidity ^0.8.0;
 
-contract InitializeContract {
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+
+contract InitializeContract is Ownable {
     //owner of the contract
     address public owner;
 
@@ -94,8 +97,17 @@ contract InitializeContract {
             _pendingUnits
         );
     }
-    
-    function ownerAddress() public view returns(address){
+
+    function ownerAddress() public view returns (address) {
         return address(this);
     }
+
+    // 1 - Personal Info
+    // 2 - Contact
+    // 4 - Education
+    // 8 - Financial
+
+    function grant(address _requester, uint16 _data) public {}
+
+    function revoke(address _requester, uint16 _data) public {}
 }
